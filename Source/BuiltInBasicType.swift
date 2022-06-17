@@ -136,7 +136,9 @@ extension String: _BuiltInBasicType {
                     return "false"
                 }
             }
-            return formatter.string(from: num)
+            let number = num as NSNumber
+            return number.stringValue
+            // return formatter.string(from: num)
         case _ as NSNull:
             return nil
         default:
